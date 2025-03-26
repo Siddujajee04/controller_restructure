@@ -1,0 +1,32 @@
+<h2>Patient Details</h2>
+<p>
+  <strong>Name:</strong> <%= @patient.fullname %><br>
+  <strong>Age:</strong> <%= @patient.age %><br>
+  <strong>Phone:</strong> <%= @patient.phone_number %><br>
+</p>
+<div style="display: flex; gap: 50px">
+  <div>
+    <h1>Admissions</h1>
+    <% @admissions.each_with_index do |admission, index| %>
+      <%= admission.consultant %>
+      <%= admission.admission_date_time %>
+    <% end %>
+  </div>
+  <div>
+    <h1>Admissions</h1>
+    <% @admissions.each_with_index do |admission, index| %>
+      <%= admission.consultant %>
+      <%= admission.admission_date_time %>
+    <% end %>
+  </div>
+</div>
+<div style="display: flex; gap: 100px">
+  <turbo-frame id="appointment_form">
+    <%= link_to "Add Admission", new_departments_admission_path(@patient), 
+                data: { turbo_frame: "appointment_form" }, class: "" %>
+  </turbo-frame>
+  <turbo-frame id="appointment_form">
+    <%= link_to "Add Appointment", new_departments_appointment_path(@patient), 
+                data: { turbo_frame: "appointment_form" }, class: "" %>
+  </turbo-frame>
+</div>

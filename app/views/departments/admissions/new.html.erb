@@ -1,0 +1,15 @@
+<turbo-frame id="admission_form">
+  <%= form_with model: @admission, url: departments_appointments_path, method: :post do |f| %>
+    <div class="mb-3">
+      <%= f.label :consultant, "consultant" %>
+      <%= f.text_field :consultant, class: "" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :admission_date_time, "Appointment Time" %>
+      <%= f.date_field :admission_date_time, class: "" %>
+    </div>
+    <div class="mb-3">
+      <%= f.submit "Book Appointment", class: "" %>
+    </div>
+  <% end %>
+</turbo-frame>
