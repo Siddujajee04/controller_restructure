@@ -1,4 +1,4 @@
-class Departments::AdmissionsController < ApplicationController
+class Departments::Admissions::AdmissionsController < ApplicationController
   def index
     
   end

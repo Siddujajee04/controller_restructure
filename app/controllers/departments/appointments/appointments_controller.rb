@@ -1,4 +1,4 @@
-class Departments::AppointmentsController < ApplicationController
+class Departments::Appointments::AppointmentsController < ApplicationController
   def index
     
   end
